@@ -10,13 +10,12 @@ func main() {
 	channel1 := make(chan string)
 	channel2 := make(chan string)
 
-	// Goroutine 1 sending a message to channel1 after 2 seconds
+	//send msg form channel 1
 	go func() {
 		time.Sleep(2 * time.Second)
 		channel1 <- "Message from Goroutine 1"
 	}()
 
-	// Goroutine 2 sending a message to channel2 after 4 seconds
 	go func() {
 		time.Sleep(3 * time.Second)
 		channel2 <- "Message from Goroutine 2"
