@@ -10,7 +10,6 @@ func main() {
 	channel1 := make(chan string)
 	channel2 := make(chan string)
 
-	//send msg form channel 1
 	go func() {
 		time.Sleep(2 * time.Second)
 		channel1 <- "Message from Goroutine 1"
